@@ -21,7 +21,7 @@ Data is stored in CSV files in https://github.com/Vchalem/fsc-demo-pack/tree/mas
 
 You can read more options for that plugin at plugin's Wiki page.
 
-# Is there any way I can use this repo for a demo without needing command line and running commands?
+# Is there any way I can use this repo for a demo without Command Line?
 Yes!
 
 You can use [Heroku Deployer](https://github.com/mshanemc/deploy-to-sfdx) to create an org from this repo via UI without any knowledge (or use) of command line tools. 
