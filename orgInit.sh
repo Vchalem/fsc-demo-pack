@@ -3,16 +3,18 @@
 #create scratch org
 sfdx force:org:create -f config/project-scratch-def.json -a FSCADK2 --setdefaultusername -d 7
 
-#pckg installs
+#Financial Servicse Cloud - Managed Package
 sfdx force:package:install --package 04t1E000000jazHQAQ -w 20 
-#FSC Extn
+#Financial Servicse Cloud - Extension Package
 #Has all fieldsets for Lightning pages like Financial Account tab on Account
 sfdx force:package:install --package 04t1E000001Iql5 -w 20
 
 
 sfdx force:source:push 
 
+#Assign FSC Standard Permission set which will also install FSC PSL
 sfdx force:user:permset:assign -n FinancialServicesCloudStandard
+
 #This permission set is for data load as some permissions are not assigned yet
 #You can remove this after data load
 #Data load instructions are in dataLoad.sh
@@ -28,6 +30,16 @@ sfdx force:apex:execute -f config/setup.apex
 
 
 sfdx force:org:open
+
+
+
+
+
+
+
+
+
+
 
 
 
