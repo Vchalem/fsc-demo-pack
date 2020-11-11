@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #create scratch org
-sfdx force:org:create -f config/project-scratch-def.json -a FSCADK2 --setdefaultusername -d 7
+sfdx force:org:create -f config/project-scratch-def.json -a FSCADK3 --setdefaultusername -d 7
 
 #Financial Servicse Cloud - Managed Package
 sfdx force:package:install --package 04t1E000000jazHQAQ -w 20 
