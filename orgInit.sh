@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #create scratch org
-sfdx force:org:create -f config/project-scratch-def.json -a FSCADK3 --setdefaultusername -d 7
+sfdx force:org:create -f config/project-scratch-def.json -a FSCADK2 --setdefaultusername -d 7
 
 #Financial Servicse Cloud - Managed Package
 sfdx force:package:install --package 04t1E000000jazHQAQ -w 20 
@@ -19,8 +19,8 @@ sfdx force:user:permset:assign -n FinancialServicesCloudStandard
 #You can remove this after data load
 #Data load instructions are in dataLoad.sh
 
-#sfdx force:user:permset:assign -n FSC_DataLoad_Custom
-#sfdx sfdmu:run --sourceusername csvfile --targetusername FSCADK2 -p data/sfdmu/ --noprompt
+sfdx force:user:permset:assign -n FSC_DataLoad_Custom
+sfdx sfdmu:run --sourceusername csvfile --targetusername FSCADK2 -p data/sfdmu/ --noprompt
 
 
 
@@ -30,16 +30,6 @@ sfdx force:apex:execute -f config/setup.apex
 
 
 sfdx force:org:open
-
-
-
-
-
-
-
-
-
-
 
 
 
