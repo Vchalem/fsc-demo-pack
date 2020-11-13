@@ -19,8 +19,8 @@ sfdx force:user:permset:assign -n FinancialServicesCloudStandard
 #You can remove this after data load
 #Data load instructions are in dataLoad.sh
 
-#sfdx force:user:permset:assign -n FSC_DataLoad_Custom
-#sfdx sfdmu:run --sourceusername csvfile --targetusername FSCADK2 -p data/sfdmu/ --noprompt
+sfdx force:user:permset:assign -n FSC_DataLoad_Custom
+sfdx sfdmu:run --sourceusername csvfile --targetusername FSCADK2 -p data/sfdmu/ --noprompt
 
 
 
