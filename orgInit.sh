@@ -21,6 +21,7 @@ sfdx force:user:permset:assign -n FinancialServicesCloudStandard
 
 sfdx force:user:permset:assign -n FSC_DataLoad_Custom
 sfdx sfdmu:run --sourceusername csvfile --targetusername FSCADK2 -p data/sfdmu/ --noprompt
+sfdx sfdmu:run --sourceusername csvfile  -p data/sfdmu/ --noprompt
 
 
 
